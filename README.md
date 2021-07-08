@@ -1,18 +1,23 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Home Task for Majed Ali
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+There are two parts of the task as follows
+- Create an Aura component to show case list on Contact Page.
+- Create REST API for get contact related records.
 
-## How Do You Plan to Deploy Your Changes?
+## Aura Component for Lightning experience
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+- This Code can be located under  `force-app/main/default/aura/CaseList/`
 
-## Configure Your Salesforce DX Project
+## REST API to get contact related cases
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+This Code can be located under `force-app/main/default/classes/`
+Here we have two apex classes for both tasks.
+- CaseController is used in aura component to load and update case list.
+- ContactAPI class is used to expose REST endpoints for other systems to get contact related records.
 
-## Read All About It
+## How to Run REST API
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+- Get any contact id from Salesforce to test.
+- Get Session id in VS Code terminal with `sfdx force:org:display`
+- Run Following code to get json response.
+`curl -H "Authorization: Bearer <Session Token>" "<Salesforce Org Link>/services/apexrest/Contact/<contactid>"`
