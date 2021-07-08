@@ -7,13 +7,22 @@ global with sharing class ContactAPI
     {
         try 
         {
+            String contactId = null;
             RestRequest req = RestContext.request;
-            RestResponse res = RestContext.response;
-            String contactId = req.requestURI.substring(req.requestURI.lastIndexOf('/')+1);
+
+            if (req != null)
+            {
+                contactId = req.requestURI.substring(req.requestURI.lastIndexOf('/')+1);
+            }
             
-            List<Case> Caslist = [select id, ContactId, Status, ProductId, Subject, Description, Home_Country__c, Product_Name__c, Product_Cost__c  from Case where ContactId =: contactId ];
-            return Caslist;
-        } 
+            if(contactId != null)
+            {
+                List<Case> Caslist = [select id, ContactId, Status, ProductId, Subject, Description, Home_Country__c, Product_Name__c, Product_Cost__c  from Case where ContactId =: contactId ];
+                return Caslist;
+            }
+            return null;
+            
+        }
         catch(DmlException e) 
         {
             return null;
