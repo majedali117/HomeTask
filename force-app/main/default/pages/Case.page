@@ -1,0 +1,18 @@
+<apex:page controller="CaseController">
+	<apex:form >
+	<apex:pageBlock title="Case Details" mode="edit">
+		<apex:pageblockSection title="Case Information">
+			<apex:inputField value="{!cas.ContactId}"/>
+			<apex:inputField value="{!cas.Status}"/>
+			<apex:inputField value="{!cas.ProductId}"/>
+			<apex:inputField value="{!cas.Subject}"/>
+            <apex:inputField value="{!cas.Description}"/>
+            <apex:inputField value="{!cas.Contact.Home_Country__c}"/>
+            <apex:inputField value="{!cas.Contact.Product_del__c}"/>
+		</apex:pageblockSection>
+		<apex:pageBlockButtons >
+			<apex:commandButton value="Save Case" action="{!save}"/>
+		</apex:pageBlockButtons>
+	</apex:pageBlock>
+	</apex:form>
+</apex:page>
