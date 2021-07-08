@@ -8,6 +8,10 @@ There are two parts of the task as follows
 
 - This Code can be located under  `force-app/main/default/aura/CaseList/`
 
+Following are the pictures of the component in action
+![Case List](/images/caselist.png)
+![Case List](/images/caselistedit.png)
+
 ## REST API to get contact related cases
 
 This Code can be located under `force-app/main/default/classes/`
@@ -20,4 +24,4 @@ Here we have two apex classes for both tasks.
 - Get any contact id from Salesforce to test.
 - Get Session id in VS Code terminal with `sfdx force:org:display`
 - Run Following code to get json response.
-`curl -H "Authorization: Bearer <Session Token>" "<Salesforce Org Link>/services/apexrest/Contact/<contactid>"`
+```curl -H "Authorization: Bearer <Session Token>" "<Salesforce Org Link>/services/apexrest/Contact/<contactid>"```
