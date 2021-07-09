@@ -22,7 +22,7 @@ public with sharing class CaseController
     {
       try 
       {
-          if(Caslist!= null && Caslist.size()>0)
+          if(Caslist!= null && Caslist.size() > 0)
           {
                update Caslist;
           }

@@ -1,7 +1,7 @@
 @isTest
 public class ContactAPITest {
     @isTest static  void testdoGet() {
-        Id recordId = 'contactid';
+        Id recordId = '<contactid>';
         // Set up a test request
         RestRequest request = new RestRequest();
         request.requestUri = 'sfdc instance url /services/apexrest/Contact/' + recordId;

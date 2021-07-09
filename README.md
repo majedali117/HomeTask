@@ -1,4 +1,4 @@
-# Salesforce Home Task for Majed Ali
+# Salesforce Task for Majed Ali
 
 There are two parts of the task as follows
 - Create an Aura component to show case list on Contact Page.

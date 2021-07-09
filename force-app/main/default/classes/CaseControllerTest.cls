@@ -4,7 +4,7 @@ public class CaseControllerTest
     @isTest
     static void testgetList() 
     {
-        String recordId = '0035g000007nfIEAAY';
+        String recordId = '<contactid>';
         List<Case> values = CaseController.getList(recordId);
         // Verify results
         System.assert(values != null); 
@@ -16,7 +16,7 @@ public class CaseControllerTest
     @isTest
     static void testupdateRelatedList() 
     {
-        String recordId = '0035g000007nfIEAAY';
+        String recordId = '<contactid>';
         List<Case> values = CaseController.getList(recordId);
         CaseController.updateRelatedList(values);
     }
